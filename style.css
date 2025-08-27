@@ -24,14 +24,15 @@ p {
     justify-content: center;
     text-align: center;
 }
-button {
+svg, button {
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-button:hover {
+svg, button:hover {
   transform: translateY(-4px) scale(1.05);
 }
 
-button:active {
+svg, button:active {
   transform: translateY(-1px) scale(0.98);
 }
