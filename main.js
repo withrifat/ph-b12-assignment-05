@@ -1,21 +1,17 @@
 // Global variables
 let heartCount = 0;
 let copyCount = 0;
-// let coinCount = 100;
-// let coinCount = document.getElementById;
-
+let coinCount = 100;
 // Function to get element by ID
 function getElement(id) {
     return document.getElementById(id);
 }
-
 // Function to update the display
 function updateDisplay() {
     getElement('heartValue').innerText = heartCount;
     getElement('coinValue').innerText = coinCount;
     getElement('copy-count').innerText = copyCount;
 }
-
 // Event listener for the entire card container
 document.addEventListener('click', function(e) {
     // Heart icon functionality
@@ -23,7 +19,6 @@ document.addEventListener('click', function(e) {
         heartCount++;
         updateDisplay();
     }
-
     // Copy button functionality
     if (e.target.closest('.copyBtn')) {
         const card = e.target.closest('.bg-white');
@@ -33,7 +28,6 @@ document.addEventListener('click', function(e) {
         alert(`Copied: ${number}`);
         updateDisplay();
     }
-
     // Call button functionality
     if (e.target.closest('.callBtn')) {
         if (coinCount < 20) {
